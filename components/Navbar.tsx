@@ -1,6 +1,6 @@
 
 // change this code to add custom navbar
-import { UserButton } from "@clerk/nextjs";
+import { UserButton ,SignOutButton} from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 import React from "react";
@@ -36,7 +36,8 @@ const Navbar = async () => {
                 <li>Profile</li>
               </Link>
               <li className="flex items-center">
-                <UserButton />
+                {/* <UserButton /> */}
+                <SignOutButton redirectUrl="/" />
               </li>
             </>
           )}
